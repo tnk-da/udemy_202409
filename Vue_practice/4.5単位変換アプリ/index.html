@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <!-- 監視プロパティ(ウォッチャ)　特定のデータ,算出プロパティの変化時に行う処理 -->
+  <div id="app">
+    <p><input type="text" v-model="km">km</p>
+    <p><input type="text" v-model="m">m</p>
+
+    <!-- deepオプション -->
+    <ul>
+      <li v-for = "color in colors">
+        {{color.name}}
+      </li>
+    </ul>
+    <button v-on:click="onClick">CLICK!</button>
+  </div>
+
+  <script src="https://unpkg.com/vue@3.1.5"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

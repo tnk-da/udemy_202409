@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <div id="app">
+    <p>{{message}}</p>
+    <input type="text" v-model="message">
+    <pre>{{$data}}</pre>
+
+    <textarea v-model="message"></textarea>
+    <br>
+    <br>
+
+    <!-- checkbox単数 -->
+    <!-- <label for="checkbox">{{checked}}</label>
+    <input type="checkbox" id="checkbox" v-model="checked"> -->
+    <br>
+    <br>
+
+    <!-- checkbox複数 -->
+    <!-- <label for="red">Red</label>
+    <input type="checkbox" id="red" value="red" v-model="colors">
+    <label for="green">Green</label>
+    <input type="checkbox" id="green" value="green" v-model="colors">
+    <label for="blue">Blue</label>
+    <input type="checkbox" id="blue" value="blue" v-model="colors">
+    <p>{{colors}}</p> -->
+
+    <!-- radiobutton -->
+    <!-- <input type="radio" id="red" value="red" v-model="color">
+    <label for="red">Red</label>
+    <input type="radio" id="green" value="green" v-model="color">
+    <label for="green">Green</label>
+    <input type="radio" id="blue" value="blue" v-model="color">
+    <label for="blue">Blue</label>
+    <p>{{color}}</p> -->
+
+    <!-- セレクトボックス単数 -->
+    <!-- <select v-model="selected">
+      <option disabled value=''>Please select one</option>
+      <option>Red</option>
+      <option>Green</option>
+      <option>Blue</option>
+    </select>
+    <p>{{selected}}</p> -->
+
+    <!-- セレクトボックス複数 -->
+    <!-- <select v-model="selected" multiple>
+    <option>Red</option>
+    <option>Green</option>
+    <option>Blue</option>
+    </select>
+    <p>{{selected}}</p> -->
+
+    <!-- 修飾子 .lazy 入力確定時に値渡し-->
+    <!-- <input type="text" v-model.lazy="message">
+    <p>{{message}}</p> -->
+
+    <!-- 修飾子 .trim 入力の空白(スペース)を取り除く-->
+    <!-- <input type="text" v-model.trim="message">
+    <br>
+    <input type="text" v-model="message">
+    <pre>{{$data}}</pre> -->
+
+    <!-- 修飾子 .number -->
+    <!-- inputのvalueは常に"文字列"として返す -->
+    <input type="number" v-model.number="age">
+    {{age + 10}}
+  </div>
+
+  <script src="https://unpkg.com/vue@3.1.5"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

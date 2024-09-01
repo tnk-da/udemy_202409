@@ -1,0 +1,17 @@
+.large {
+    font-size: 36px;
+}
+
+.textDanger{
+    color:red
+}
+
+.bgGray{
+    background-color: gray;
+}
+
+/* CSSは,より後に書かれたスタイルを優先する */
+
+.textBlue{
+    color:blue
+}

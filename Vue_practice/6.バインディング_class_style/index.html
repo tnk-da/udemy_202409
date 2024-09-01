@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <div id="app">
+
+    <!-- booleanでclassの付替え可能 -->
+    <p>Hello! <span class="bgGray textBlue" v-bind:class="{large:isLarge, textDanger:hasError}">Vue.js</span></p>
+    <!-- v-bindの省略記法もある. -->
+    <p>Hello! <span :class="{large:isLarge}">Vue.js</span></p>
+    <br>
+
+    <!-- 配列表示で複数classをbind可能 -->
+    <p>Hello! <span v-bind:class="largeClass">Vue.js</span></p>
+    <p>Hello! <span v-bind:class="[largeClass, dangerClass]">Vue.js</span></p>
+    <br>
+
+    <!-- 複数classをbind時,jsでオブジェクト定義できる -->
+    <p>Hello! <span v-bind:class="classObject">Vue.js</span></p>
+    <br>
+
+    <!-- 三項演算子でclassの有無　＋　配列で常時適用するclassも指定可能 -->
+    <p>Hello! <span v-bind:class="[isLarge? largeClass : '' ,bgClass]">Vue.js</span></p>
+    <br>
+
+    <!-- インラインスタイルでcssをあてる -->
+    <p>Hello! <span v-bind:style="{color:color, fontSize:fontSize + 'px'}">Vue.js</span></p>
+    <br>
+
+    <!-- インラインスタイルでcssをあてる(オブジェクト) -->
+    <p>Hello! <span v-bind:style="styleObject">Vue.js</span></p>
+  </div>
+
+  <script src="https://unpkg.com/vue@3.1.5"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

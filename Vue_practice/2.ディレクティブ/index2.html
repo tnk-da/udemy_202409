@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div id="app">
+
+        <!-- v-once -->
+        <!-- <p v-once>{{message}}</p>
+        <button v-on:click="clickHandler">CLICK!</button> -->
+
+        <!-- v-pre -->
+        <!-- <p v-pre>{{message}}</p> -->
+
+        <!-- v-html 利用には注意-->
+        <!-- <p >{{message}}</p> 
+        <p v-html="message"></p> -->
+
+        <!-- v-cloak インスタンスの準備完了までCSSclassを付与-->
+        <!-- <p v-cloak>{{message}}</p> -->
+
+        <!-- v-text マスタッシュ構文と別方法 マスタッシュが良-->
+        <!-- <p v-text="message"></p>  -->
+
+        <!-- JS構文 -->
+        <!-- <p>{{number + 10}}</p> -->
+        <!-- <p>{{ok ? "YES" : "NO"}}</p> -->
+
+        <!-- v-bind[属性のデータバインディング]省略記法 -->
+        <a v-bind:href="url">LINK1</a><br>
+        <a :href="url">LINK2</a>
+    </div>
+    <script src="https://unpkg.com/vue@3.1.5"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
